@@ -62,12 +62,12 @@
             background-color: #000;
         }
     </style>
-    <title>Document</title>
+    <title>語音輸入</title>
 </head>
 
 <body>
     <main>
-        <textarea name="" class="text" cols="50" rows="10"></textarea>
+        <textarea placeholder="按下麥克風後請說話" name="" class="text" cols="50" rows="10"></textarea>
         <button class="btn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                 <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
@@ -83,6 +83,7 @@
     var btn = document.querySelector('.btn');
     btn.addEventListener('click', (ea) => {
         btn.classList.add('fade');
+
 
         let reognition = new webkitSpeechRecognition()
         reognition.lang = 'zh-TW'
